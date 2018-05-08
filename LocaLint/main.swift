@@ -11,5 +11,5 @@ import Foundation
 guard let configuration = FileManager.default.loadConfiguration() else { fatalError("No configuration file found.") }
 
 configuration.targets.forEach { target in
-    LocalizableLinter.make(for: target)?.lint()
+    LocalizableLinter(from: target)?.lint()
 }

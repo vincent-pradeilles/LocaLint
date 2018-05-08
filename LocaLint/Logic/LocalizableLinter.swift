@@ -14,7 +14,7 @@ struct LocalizableLinter {
     let swiftFiles: [SwiftFile]
     let localizableFile: StringFile
 
-    static func make(for target: TargetConfiguration) -> LocalizableLinter? {
+    init?(from target: TargetConfiguration) {
         let currentDirectoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
         
         let swiftFilesURLs = target.swiftFilesDirectoriesRelativePaths.flatMap { FileManager.default.URLsForSwiftFiles(in: $0) }
@@ -24,9 +24,9 @@ struct LocalizableLinter {
         
         guard let stringFile = StringFile(fileURL: localizableFileURL) else { return nil }
         
-        return LocalizableLinter(targetConfiguration: target,
-                                 swiftFiles: swiftFiles,
-                                 localizableFile: stringFile)
+        self.targetConfiguration = target
+        self.swiftFiles = swiftFiles
+        self.localizableFile = stringFile
     }
     
     func lint() {
