@@ -13,6 +13,7 @@
 		BF6B233220A1AB4B00F593AD /* SwiftFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B233120A1AB4B00F593AD /* SwiftFile.swift */; };
 		BF6B233620A1AB7A00F593AD /* LocalizableLinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B233520A1AB7A00F593AD /* LocalizableLinter.swift */; };
 		BF6B233C20A1AF9200F593AD /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B233B20A1AF9200F593AD /* FileManager+Extension.swift */; };
+		BFC48C5320A1BF71008EA76B /* Sequence+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC48C5220A1BF71008EA76B /* Sequence+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,7 @@
 		BF6B233120A1AB4B00F593AD /* SwiftFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFile.swift; sourceTree = "<group>"; };
 		BF6B233520A1AB7A00F593AD /* LocalizableLinter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableLinter.swift; sourceTree = "<group>"; };
 		BF6B233B20A1AF9200F593AD /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
+		BFC48C5220A1BF71008EA76B /* Sequence+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				BF6B233B20A1AF9200F593AD /* FileManager+Extension.swift */,
+				BFC48C5220A1BF71008EA76B /* Sequence+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				BF6B233C20A1AF9200F593AD /* FileManager+Extension.swift in Sources */,
 				BF6B232920A1AB2E00F593AD /* main.swift in Sources */,
 				BF6B233620A1AB7A00F593AD /* LocalizableLinter.swift in Sources */,
+				BFC48C5320A1BF71008EA76B /* Sequence+Extension.swift in Sources */,
 				BF4089E420A1B13F00FDE937 /* LinterConfiguration.swift in Sources */,
 				BF6B233220A1AB4B00F593AD /* SwiftFile.swift in Sources */,
 			);

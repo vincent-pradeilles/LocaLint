@@ -34,12 +34,13 @@ struct LocalizableLinter {
         
         checkUsedKeysExist()
         checkExistingKeysAreUsed()
+        checkDuplicateKeys()
     }
     
     private func checkUsedKeysExist() {
         swiftFiles.forEach { file in
             file.localizedKeys.forEach { key in
-                if localizableFile.localizedStrings[key] == nil {
+                if !localizableFile.isKeyDefined(key) {
                     print("🚨 \"\(key)\" used in \(file.fileName) does not exist")
                 }
             }
@@ -52,6 +53,18 @@ struct LocalizableLinter {
             if !keyIsUsedInOneFile {
                 print("⚠️ \"\(key)\" is never used")
             }
+        }
+    }
+    
+    private func checkDuplicateKeys() {
+        let duplicateKeys = localizableFile.localizedStrings.map { $0.key }.filter { key in
+            let occurencesOfKey = localizableFile.localizedStrings.reduce(0) { ($1.key == key) ? $0 + 1 : $0 }
+            
+            return occurencesOfKey > 1
+        }
+        
+        duplicateKeys.duplicatesRemoved().forEach { key in
+            print("🚨 \"\(key)\" has duplicate values")
         }
     }
 }
