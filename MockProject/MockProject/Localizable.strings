@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  MockProject
+
+  Created by Vincent on 08/05/2018.
+  Copyright © 2018 Vincent. All rights reserved.
+*/
+
+"key1"="Value 1";
+"key2"="Value 2";
+"key4"="Value 4";
